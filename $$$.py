@@ -1,13 +1,11 @@
-import requests, threading, random, os, time, ctypes
+import requests, threading, random, os, time
 from colorama import init, Fore
 from datetime import datetime
 init()
 threads = []
 tokens = open('tokens.txt','r').read().splitlines()
-ctypes.windll.kernel32.SetConsoleTitleW("Discord X Raider | github.com/XinGodDev")
 
 def Spammer():
-	ctypes.windll.kernel32.SetConsoleTitleW("Discord X Raider | github.com/XinGodDev - Spamming...")
 	for token in tokens:
 		now = datetime.now()
 		time = now.strftime("%H:%M:%S")
@@ -23,7 +21,6 @@ def Spammer():
 			print(f"{Fore.RED}[{Fore.RESET}{Fore.LIGHTBLACK_EX}{time}{Fore.RED}]{Fore.RESET} {Fore.RED}Something is wrong")
 
 def Joiner(invite):
-	ctypes.windll.kernel32.SetConsoleTitleW("Discord X Raider | github.com/XinGodDev - Joining...")
 	for token in tokens:
 		now = datetime.now()
 		time = now.strftime("%H:%M:%S")
@@ -37,7 +34,6 @@ def Joiner(invite):
 		
 
 def Leaver(server_id):
-	ctypes.windll.kernel32.SetConsoleTitleW("Discord X Raider | github.com/XinGodDev - Leaving...")
 	for token in tokens:
 		now = datetime.now()
 		time = now.strftime("%H:%M:%S")
@@ -46,7 +42,6 @@ def Leaver(server_id):
 
 
 def Friender(name, discrim):
-	ctypes.windll.kernel32.SetConsoleTitleW("Discord X Raider | github.com/XinGodDev - Friending...")
 	for token in tokens:
 		now = datetime.now()
 		time = now.strftime("%H:%M:%S")
